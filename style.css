@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+      color: #eee;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 120px;
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      background: rgba(255, 140, 0, 0.05);
+      border-radius: 16px;
+      padding: 40px 50px;
+      box-shadow: 0 4px 15px rgba(255,140,0,0.3), inset 0 0 50px rgba(255,140,0,0.15);
+      backdrop-filter: blur(10px);
+      margin-bottom: 30px;
+    }
+
+    .left {
+      flex: 1;
+      font-weight: 700;
+      font-size: 32px;
+      color: #ff8c00;
+      text-shadow: 0 0 6px #ff8c00, 0 0 10px #ff6a00, 0 0 15px #ff8c00;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+    }
+
+    .right {
+      flex: 1;
+      text-align: right;
+      font-size: 20px;
+      color: #ccc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+    }
+
+    .info-title {
+      margin-bottom: 18px;
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffb04c;
+      text-shadow: 0 0 8px #ffaa33;
+    }
+
+    .buttons {
+      margin-top: 5px;
+    }
+
+    .button{
+      background: linear-gradient(145deg, #ff8c00, #ff6a00);
+      border: none;
+      padding: 14px 32px;
+      margin-left: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 700;
+      border-radius: 30px;
+      color: #fff;
+      box-shadow: 0 3px 6px rgba(255,140,0,0.7), inset 0 -2px 6px #ffa740;
+      transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+      user-select: none;
+    }
+
+    a.button {
+      background: linear-gradient(145deg, #ff8c00, #ff6a00);
+      border: none;
+      padding: 14px 32px;
+      margin-left: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 700;
+      border-radius: 30px;
+      color: #fff;
+      box-shadow: 0 3px 6px rgba(255,140,0,0.7), inset 0 -2px 6px #ffa740;
+      transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+      user-select: none;
+      
+    }
+
+    button:first-child {
+      margin-left: 0;
+    }
+    button:hover {
+      background: linear-gradient(145deg, #ffb84d, #ffaa33);
+      box-shadow: 0 6px 12px rgba(255,140,0,0.9), inset 0 -3px 8px #ffb84d;
+      transform: translateY(-2px);
+    }
+    button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(255,140,0,0.6), inset 0 -1px 3px #ff8c00;
+    }
+
+    .content {
+      width: 90%;
+      max-width: 900px;
+      padding: 40px 50px;
+      background: rgba(255,140,0,0.1);
+      border-radius: 18px;
+      box-shadow: 0 0 18px rgba(255,140,0,0.4);
+      color: #f1f1f1;
+      font-size: 18px;
+      line-height: 1.7;
+      min-height: 400px;
+      box-sizing: border-box;
+      display: none;
+      user-select: text;
+    }
+    .content.active {
+      display: block;
+      animation: fadeInContent 0.35s ease forwards;
+    }
+    .content h2 {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 28px;
+      color: #ff9c2a;
+      text-shadow: 0 0 12px #ff9c2a;
+    }
+    .content p {
+      margin-bottom: 16px;
+      white-space: pre-line;
+    }
+
+    .back-button {
+      margin-top: 32px;
+      background: linear-gradient(145deg, #ff8c00, #ff6a00);
+      border: none;
+      padding: 14px 28px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 28px;
+      color: white;
+      box-shadow: 0 3px 6px rgba(255,140,0,0.75), inset 0 -2px 6px #ffa740;
+      transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+      user-select: none;
+    }
+    .back-button:hover {
+      background: linear-gradient(145deg, #ffb84d, #ffaa33);
+      box-shadow: 0 6px 14px rgba(255,140,0,0.9), inset 0 -3px 8px #ffb84d;
+      transform: translateY(-2px);
+    }
+    .back-button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(255,140,0,0.6), inset 0 -1px 3px #ff8c00;
+    }
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(145deg, #ff8c00, #ff6a00);
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(255,140,0,0.6), inset 0 0 12px #ffac40;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      user-select: none;
+      cursor: default;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+      text-shadow: 0 0 6px #ffaa33;
+      gap: 10px;
+    }
+
+    .footer-text {
+      white-space: nowrap;
+    }
+
+    .footer a {
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 25px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow:
+        0 2px 6px rgba(255,255,255,0.4),
+        inset 0 0 6px rgba(255,255,255,0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .footer a:hover {
+      background: rgba(255,255,255,0.35);
+      box-shadow:
+        0 4px 12px rgba(255,255,255,0.7),
+        inset 0 0 10px rgba(255,255,255,0.9);
+      text-decoration: none;
+    }
+
+
+    @keyframes fadeInContent {
+      from {opacity: 0; transform: translateY(15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+
+    @media (max-width: 720px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+      }
+      .left, .right {
+        text-align: center;
+        flex: unset;
+        height: auto;
+      }
+      .right {
+        margin-top: 20px;
+      }
+      .buttons button {
+        margin: 8px 8px 0 8px;
+        width: calc(50% - 16px);
+        margin-left: 0;
+      }
+      .content {
+        padding: 30px 20px;
+        font-size: 16px;
+        max-width: 100%;
+      }
+      .footer {
+        bottom: 12px;
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+      .footer a {
+        padding: 5px 14px;
+        font-size: 14px;
+      }
+    }
+
+    .vk-link {
+      display: flex;
+      justify-content: center; /* Выравнивание по горизонтали */
+      align-items: center;    /* Выравнивание по вертикали */
+      margin-top: 20px;     /* Отступ сверху */
+      width: 100%;         /* Занимает всю ширину контейнера */
+      position: absolute;   /* Фиксируем блок внизу */
+      bottom: 20px;         /* Расстояние от низа */
+      left: 0;
+  }
+  
+  .vk-link span {
+      margin-right: 10px;   /* Отступ между текстом и кнопкой */
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center; /* Центрируем кнопки */
+    gap: 10px; 
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  text-decoration: none; /* Убираем подчеркивание */
+  border-radius: 5px;
+}
+
+.buttons-container .button { /* или a.button, если это ссылки <a> */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+#content {
+  text-align: center; /* Центрируем текст внутри #content */
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto; /* Центрируем блок #content на странице */
+}
+
+.main-info h2 { /* Центрируем заголовок h2 внутри .main-info */
+text-align: center;
+}
+
+.main-info {
+  margin-bottom: 20px;
+  text-align: center; /* Центрируем текст внутри .main-info */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  gap: 20px; /* Отступ между кнопками */
+}
